@@ -1,0 +1,100 @@
+// Verilated -*- C++ -*-
+// DESCRIPTION: Verilator output: Tracing implementation internals
+#include "verilated_vcd_c.h"
+#include "Vregister_file__Syms.h"
+
+
+VL_ATTR_COLD void Vregister_file___024root__trace_init_sub__TOP__0(Vregister_file___024root* vlSelf, VerilatedVcd* tracep) {
+    (void)vlSelf;  // Prevent unused variable warning
+    Vregister_file__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vregister_file___024root__trace_init_sub__TOP__0\n"); );
+    // Init
+    const int c = vlSymsp->__Vm_baseCode;
+    // Body
+    tracep->declBit(c+5,0,"clk",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
+    tracep->declBit(c+6,0,"write_enable",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
+    tracep->declBus(c+7,0,"write_addr",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 1,0);
+    tracep->declBus(c+8,0,"write_data",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 7,0);
+    tracep->declBus(c+9,0,"read_addr_a",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 1,0);
+    tracep->declBus(c+10,0,"read_addr_b",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 1,0);
+    tracep->declBus(c+11,0,"read_data_a",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 7,0);
+    tracep->declBus(c+12,0,"read_data_b",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 7,0);
+    tracep->pushPrefix("register_file", VerilatedTracePrefixType::SCOPE_MODULE);
+    tracep->declBit(c+5,0,"clk",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
+    tracep->declBit(c+6,0,"write_enable",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
+    tracep->declBus(c+7,0,"write_addr",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 1,0);
+    tracep->declBus(c+8,0,"write_data",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 7,0);
+    tracep->declBus(c+9,0,"read_addr_a",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 1,0);
+    tracep->declBus(c+10,0,"read_addr_b",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 1,0);
+    tracep->declBus(c+11,0,"read_data_a",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 7,0);
+    tracep->declBus(c+12,0,"read_data_b",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 7,0);
+    tracep->pushPrefix("registers", VerilatedTracePrefixType::ARRAY_UNPACKED);
+    for (int i = 0; i < 4; ++i) {
+        tracep->declBus(c+1+i*1,0,"",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, true,(i+0), 7,0);
+    }
+    tracep->popPrefix();
+    tracep->popPrefix();
+}
+
+VL_ATTR_COLD void Vregister_file___024root__trace_init_top(Vregister_file___024root* vlSelf, VerilatedVcd* tracep) {
+    (void)vlSelf;  // Prevent unused variable warning
+    Vregister_file__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vregister_file___024root__trace_init_top\n"); );
+    // Body
+    Vregister_file___024root__trace_init_sub__TOP__0(vlSelf, tracep);
+}
+
+VL_ATTR_COLD void Vregister_file___024root__trace_const_0(void* voidSelf, VerilatedVcd::Buffer* bufp);
+VL_ATTR_COLD void Vregister_file___024root__trace_full_0(void* voidSelf, VerilatedVcd::Buffer* bufp);
+void Vregister_file___024root__trace_chg_0(void* voidSelf, VerilatedVcd::Buffer* bufp);
+void Vregister_file___024root__trace_cleanup(void* voidSelf, VerilatedVcd* /*unused*/);
+
+VL_ATTR_COLD void Vregister_file___024root__trace_register(Vregister_file___024root* vlSelf, VerilatedVcd* tracep) {
+    (void)vlSelf;  // Prevent unused variable warning
+    Vregister_file__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vregister_file___024root__trace_register\n"); );
+    // Body
+    tracep->addConstCb(&Vregister_file___024root__trace_const_0, 0U, vlSelf);
+    tracep->addFullCb(&Vregister_file___024root__trace_full_0, 0U, vlSelf);
+    tracep->addChgCb(&Vregister_file___024root__trace_chg_0, 0U, vlSelf);
+    tracep->addCleanupCb(&Vregister_file___024root__trace_cleanup, vlSelf);
+}
+
+VL_ATTR_COLD void Vregister_file___024root__trace_const_0(void* voidSelf, VerilatedVcd::Buffer* bufp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vregister_file___024root__trace_const_0\n"); );
+    // Init
+    Vregister_file___024root* const __restrict vlSelf VL_ATTR_UNUSED = static_cast<Vregister_file___024root*>(voidSelf);
+    Vregister_file__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+}
+
+VL_ATTR_COLD void Vregister_file___024root__trace_full_0_sub_0(Vregister_file___024root* vlSelf, VerilatedVcd::Buffer* bufp);
+
+VL_ATTR_COLD void Vregister_file___024root__trace_full_0(void* voidSelf, VerilatedVcd::Buffer* bufp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vregister_file___024root__trace_full_0\n"); );
+    // Init
+    Vregister_file___024root* const __restrict vlSelf VL_ATTR_UNUSED = static_cast<Vregister_file___024root*>(voidSelf);
+    Vregister_file__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    // Body
+    Vregister_file___024root__trace_full_0_sub_0((&vlSymsp->TOP), bufp);
+}
+
+VL_ATTR_COLD void Vregister_file___024root__trace_full_0_sub_0(Vregister_file___024root* vlSelf, VerilatedVcd::Buffer* bufp) {
+    (void)vlSelf;  // Prevent unused variable warning
+    Vregister_file__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vregister_file___024root__trace_full_0_sub_0\n"); );
+    // Init
+    uint32_t* const oldp VL_ATTR_UNUSED = bufp->oldp(vlSymsp->__Vm_baseCode);
+    // Body
+    bufp->fullCData(oldp+1,(vlSelf->register_file__DOT__registers[0]),8);
+    bufp->fullCData(oldp+2,(vlSelf->register_file__DOT__registers[1]),8);
+    bufp->fullCData(oldp+3,(vlSelf->register_file__DOT__registers[2]),8);
+    bufp->fullCData(oldp+4,(vlSelf->register_file__DOT__registers[3]),8);
+    bufp->fullBit(oldp+5,(vlSelf->clk));
+    bufp->fullBit(oldp+6,(vlSelf->write_enable));
+    bufp->fullCData(oldp+7,(vlSelf->write_addr),2);
+    bufp->fullCData(oldp+8,(vlSelf->write_data),8);
+    bufp->fullCData(oldp+9,(vlSelf->read_addr_a),2);
+    bufp->fullCData(oldp+10,(vlSelf->read_addr_b),2);
+    bufp->fullCData(oldp+11,(vlSelf->read_data_a),8);
+    bufp->fullCData(oldp+12,(vlSelf->read_data_b),8);
+}
