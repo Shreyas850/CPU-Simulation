@@ -24,7 +24,7 @@ void Vcpu___024root___eval_nba(Vcpu___024root* vlSelf) {
     }
 }
 
-extern const VlUnpacked<SData/*15:0*/, 256> Vcpu__ConstPool__TABLE_h242fd4b0_0;
+extern const VlUnpacked<SData/*15:0*/, 256> Vcpu__ConstPool__TABLE_h6cec1bd7_0;
 
 VL_INLINE_OPT void Vcpu___024root___nba_sequent__TOP__0(Vcpu___024root* vlSelf) {
     (void)vlSelf;  // Prevent unused variable warning
@@ -109,7 +109,7 @@ VL_INLINE_OPT void Vcpu___024root___nba_sequent__TOP__0(Vcpu___024root* vlSelf) 
             = __VdlyVal__cpu__DOT__the_regs__DOT__registers__v0;
     }
     __Vtableidx1 = vlSelf->cpu__DOT__pc_addr;
-    vlSelf->cpu__DOT__instruction = Vcpu__ConstPool__TABLE_h242fd4b0_0
+    vlSelf->cpu__DOT__instruction = Vcpu__ConstPool__TABLE_h6cec1bd7_0
         [__Vtableidx1];
     vlSelf->cpu__DOT__reg_out_a = vlSelf->cpu__DOT__the_regs__DOT__registers
         [(3U & ((IData)(vlSelf->cpu__DOT__instruction) 

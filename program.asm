@@ -1,9 +1,10 @@
-// TEST PROGRAM: Branching Logic
-LOAD R1, 5
-LOAD R2, 5
-SUB R0, R1, R2
-BEQ 6          // If R1 - R2 == 0, jump to line 6
-LOAD R3, 10    // This line gets skipped!
-HALT
-LOAD R3, 255   // Line 6: Safe landing zone!
-HALT
+// THE COUNTDOWN LOOP
+LOAD R1, 5     // Line 0: Counter = 5
+LOAD R2, 1     // Line 1: Decrement value = 1
+
+// Loop Start
+SUB R1, R1, R2 // Line 2: Counter = Counter - 1
+BEQ 5          // Line 3: If Counter == 0, jump to HALT (Line 5)
+JUMP 2         // Line 4: Otherwise, jump back to Line 2
+
+HALT           // Line 5: End of program
