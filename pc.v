@@ -1,15 +1,21 @@
 module pc (
-    input            clk,    // The heartbeat
-    input            reset,  // 1 = back to 0, 0 = run normally
-    output reg [7:0] pc_out  // The current instruction address
+    input            clk,
+    input            reset,
+    input            jump_enable,   // Unconditional Jump (Opcode E)
+    input            branch_enable, // Conditional Branch (Opcode F)
+    input            zero_flag,     // From the ALU
+    input      [7:0] target_addr,   // Where to teleport to
+    output reg [7:0] pc_out
 );
 
-    // Trigger on the rising edge of the clock
     always @(posedge clk) begin
         if (reset) begin
-            pc_out <= 8'b0;      // Reboot to address 0
+            pc_out <= 8'b0;
+        // Jump if Opcode E, OR if Opcode F AND the ALU output is zero
+        end else if (jump_enable || (branch_enable && zero_flag)) begin
+            pc_out <= target_addr;
         end else begin
-            pc_out <= pc_out + 1; // Step to the next instruction
+            pc_out <= pc_out + 1;
         end
     end
 

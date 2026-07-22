@@ -1,4 +1,4 @@
-main.o: ../main.cpp Vpc.h \
+main.o: ../main.cpp Vcpu.h \
  C:/msys64/ucrt64/share/verilator/include/verilated.h \
  C:/msys64/ucrt64/share/verilator/include/verilatedos.h \
  C:/msys64/ucrt64/share/verilator/include/verilated_config.h \
