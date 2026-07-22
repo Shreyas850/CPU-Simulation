@@ -30,8 +30,8 @@ int main(int argc, char** argv) {
     tick();
     top->reset = 0;
 
-    // Run for 10 cycles to allow for branches
-    for (int cycle = 1; cycle <= 10; cycle++) {
+    // Run for 20 cycles to allow for branches
+    for (int cycle = 1; cycle <= 20; cycle++) {
         std::cout << "Executing Cycle " << cycle << "...\n";
         tick();
     }
